@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard - CoutureCorner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+
+<!-- Navigation bar goes here -->
+ <!-- Navigation Bar -->
+ <nav class="bg-white shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+          <img src="LOGO.webp" alt="Logo" class="mr-1" style="height: 50px;"> <!-- Reduce right margin if needed -->
+          <span class="font-bold text-xl text-green-600" style="margin-left: 0;">CoutureCorner</span> <!-- Adjust left margin if necessary -->
+        </a>   
+        <div class="flex items-center space-x-4">
+      <a href="Main.html" class="text-gray-600 hover:text-green-600 ">Home</a>
+      <a href="shop.html" class="text-gray-600 hover:text-green-600 ">Shop</a>
+      <a href="Designers.html" class="text-gray-600 hover:text-green-600">Designers</a>
+      <a href="events.html" class="text-gray-600 hover:text-green-600">Events</a>
+      <a href="about.html" class="text-gray-600 hover:text-green-600">About Us</a>
+      <a href="contact.html" class="text-gray-600 hover:text-green-600">Contact Us</a>
+      <a href="resources.html" class="text-gray-600 hover:text-green-600">Resources</a>
+      <a href="community.html" class="text-gray-600 hover:text-green-600">Community</a>
+      <a href="blog.html" class="text-gray-600 hover:text-green-600">Blog</a>
+      <!-- Become a Designer Button -->
+    <a href="DesignerProfileCreate.html" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors">Become A Designer</a>
+
+    </div>
+    <!-- Icons for profile and cart could also be included here -->
+    <div class="flex items-center">
+      <a href="profile.html" class="text-gray-600 hover:text-green-600 mx-2 text-green-700 bg-green-50">
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="cart.html" class="text-gray-600 hover:text-green-600 mx-2">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="container mx-auto p-6">
+  <div class="bg-white rounded-lg shadow overflow-hidden">
+    <div class="md:flex justify-between p-6">
+      <!-- Profile Section -->
+      <div class="md:w-1/3 border-r border-green-200 p-4">
+        <h3 class="text-lg font-semibold text-green-600 mb-3">My Profile</h3>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+        <!-- Other profile details -->
+        <a href="profile-edit.html" class="block bg-green-500 hover:bg-green-700 text-white text-center py-2 px-4 rounded mt-4">
+          Edit Profile
+        </a>
+      </div>
+
+      
+
+      <!-- Collections Section -->
+      <div class="md:w-1/3 border-r border-green-200 p-4">
+        <h3 class="text-lg font-semibold text-green-600 mb-3">My Collections</h3>
+        <!-- Display saved and liked collections -->
+        <!-- Example placeholder content -->
+        <p><i class="far fa-heart text-green-500"></i> Summer Collection</p>
+        <p><i class="far fa-bookmark text-green-500"></i> Winter Collection</p>
+        <a href="collections.html" class="block bg-green-500 hover:bg-green-700 text-white text-center py-2 px-4 rounded mt-4">
+          View Collections
+        </a>
+      </div>
+
+      <!-- Orders and Collaboration Section -->
+      <div class="md:w-1/3 p-4">
+        <h3 class="text-lg font-semibold text-green-600 mb-3">My Activity</h3>
+        <!-- Order History -->
+        <p><strong>Recent Order:</strong> #00123</p>
+        <!-- Collaboration Status -->
+        <p><strong>Collaboration:</strong> In Progress</p>
+        <a href="orders.html" class="block bg-green-500 hover:bg-green-700 text-white text-center py-2 px-4 rounded mt-4">
+          Order History
+        </a>
+        <a href="collaborations.html" class="block bg-green-500 hover:bg-green-700 text-white text-center py-2 px-4 rounded mt-4">
+          Collaboration Statuses
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer goes here -->
+<!-- Footer -->
+<footer class="bg-white border-t-2 border-green-200">
+  <div class="container mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <!-- Brand Information -->
+      <div class="mb-6 md:mb-0">
+        <a href="index.html" class="text-green-600 hover:text-green-700 font-bold text-lg">CoutureCorner</a>
+        <p class="text-xs text-gray-600 mt-2">Fashion Showcase & Collaboration Platform</p>
+      </div>
+      
+      <!-- Footer Navigation -->
+      <nav class="flex flex-wrap items-center text-sm justify-center mb-6 md:mb-0">
+        <a href="about.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">About Us</a>
+        <a href="privacy-policy.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">Privacy Policy</a>
+        <a href="terms-of-service.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">Terms of Service</a>
+        <a href="contact.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">Contact</a>
+        <a href="faq.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">FAQ</a>
+      </nav>
+      
+      <!-- Social Media Links -->
+      <div class="flex justify-center items-center">
+        <a href="https://twitter.com/CoutureCorner" class="text-gray-600 hover:text-green-600 mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com/CoutureCorner" class="text-gray-600 hover:text-green-600 mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/CoutureCorner" class="text-gray-600 hover:text-green-600 mx-2">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright and Legal Notice -->
+    <div class="text-center py-8 mt-10">
+      <p class="text-gray-600 text-sm">
+        © 2024 CoutureCorner. All Rights Reserved. Content may not be reproduced without permission.
+      </p>
+    </div>
+  </div>
+    </footer>
+
+</body>
+</html>
+

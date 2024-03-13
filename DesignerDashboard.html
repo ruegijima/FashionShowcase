@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer Dashboard - CoutureCorner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <style>
+      /* Additional custom styles */
+      .dashboard-header {
+        background-color: #f4f4f4; /* Light grey for header background */
+        position: fixed; /* Fixed position */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Make sure it's above other elements */
+      }
+
+      /* You might need to add top padding to the body to avoid the header overlapping content */
+      body {
+        padding-top: 68px; /* Height of the header plus some extra space */
+      }
+      .dashboard-welcome {
+        background: #ffffff; /* White background for welcome message */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -4px rgba(0, 0, 0, 0.1); /* Tailwind shadow-lg */
+      }
+      .stat-card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      .stat-card:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Tailwind shadow-2xl */
+      }
+      .icon {
+        color: #38a169; /* Tailwind green-600 */
+      }
+      .logo {
+        height: 50px; /* Adjust as needed */
+        /* Additional styling if necessary */
+      }
+      /* Additional custom styles */
+      .brand-name {
+        /* Customize the font size, weight, and color as needed */
+        font-size: 1.75rem; /* Example size */
+        font-weight: bold; /* Bold font */
+        color: #38a169; /* Tailwind green-600 */
+        margin-left: 5rem; /* Adds space to the left of the brand name */
+
+        /* Additional styling if necessary */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-700">
+    <!-- Header -->
+    <div class="dashboard-header flex justify-between items-center p-4 shadow">
+        <!-- Clicking on the logo or brand name will now take the user to index.html -->
+        <a href="index.html" class="flex items-center">
+          <img src="LOGO.webp" alt="CoutureCorner Logo" class="logo h-10" />
+          <!-- CoutureCorner brand name -->
+          <span class="brand-name text-2xl font-bold text-green-600 ml-2">
+            CoutureCorner
+          </span>
+        </a>
+      <!-- Right aligned links -->
+      <div class="space-x-4">
+        <a
+          href="/help"
+          class="text-green-600 hover:text-green-800 transition duration-300"
+          >Help/Support</a
+        >
+        <!-- <a
+          href="index.html"
+          class="text-green-600 hover:text-green-800 transition duration-300"
+          >Logout</a
+        > -->
+        <a
+          href="javascript:void(0);"
+          id="logout-link"
+          class="text-green-600 hover:text-green-800 transition duration-300"
+          >Logout</a
+        >
+      </div>
+    </div>
+
+    <!-- Welcome message -->
+    <div class="dashboard-welcome my-4 mx-8 p-6 rounded text-center">
+      <h2 class="text-2xl font-semibold mb-2" id="welcome-message">
+        Welcome, Designer Name!
+      </h2>
+      <p class="text-md">Here's your latest activity overview.</p>
+    </div>
+
+    <!-- Overview Section -->
+    <!-- Stat Cards -->
+    <div
+      class="my-4 mx-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+    >
+      <!-- Existing Profile Views Card -->
+      <div class="stat-card p-6 bg-white rounded-lg shadow-lg">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Profile Views</h3>
+            <div class="text-2xl font-bold">1,234</div>
+          </div>
+          <i class="fas fa-eye fa-2x icon"></i>
+        </div>
+      </div>
+
+      <!-- Ongoing Collaborations Card -->
+      <div class="stat-card p-6 bg-white rounded-lg shadow-lg">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">
+              Ongoing Collaborations
+            </h3>
+            <div class="text-2xl font-bold">5</div>
+          </div>
+          <i class="fas fa-handshake fa-2x icon"></i>
+        </div>
+      </div>
+
+      <!-- Recent Sales Card -->
+      <div class="stat-card p-6 bg-white rounded-lg shadow-lg">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Recent Sales</h3>
+            <div class="text-2xl font-bold">12</div>
+          </div>
+          <i class="fas fa-dollar-sign fa-2x icon"></i>
+        </div>
+      </div>
+
+      <!-- More Stats Card -->
+      <div class="stat-card p-6 bg-white rounded-lg shadow-lg">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">More Stats</h3>
+            <div class="text-2xl font-bold">...</div>
+          </div>
+          <i class="fas fa-chart-bar fa-2x icon"></i>
+        </div>
+      </div>
+    </div>
+    <!-- End of Stat Cards -->
+
+<!-- Main content -->
+<div class="my-4 mx-8">
+    <!-- First row of cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Profile Management Card -->
+      <div class="p-6 bg-white rounded-lg shadow-lg mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 mb-3">
+          Profile Management
+        </h3>
+        <p>Edit your profile, update your bio, manage your portfolio, and more.</p>
+        <a href="/edit-profile" class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors inline-block">Edit Profile</a>
+      </div>
+  
+      <!-- Portfolio Management Card -->
+      <div class="p-6 bg-white rounded-lg shadow-lg mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 mb-3">
+          Portfolio Management
+        </h3>
+        <p>Upload new items and edit your existing portfolio pieces.</p>
+        <a href="/manage-portfolio" class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors inline-block">Manage Portfolio</a>
+      </div>
+  
+      <!-- Collaboration Requests Card -->
+      <div class="p-6 bg-white rounded-lg shadow-lg mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 mb-3">
+          Collaboration Requests
+        </h3>
+        <p>Review and manage your collaboration requests.</p>
+        <a href="/manage-requests" class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors inline-block">Manage Requests</a>
+      </div>
+    </div>
+  
+    <!-- Second row of cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Collection Management Card -->
+      <div class="p-6 bg-white rounded-lg shadow-lg mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 mb-3">
+          Collection Management
+        </h3>
+        <p>Add new items, edit existing ones, and manage your collection.</p>
+        <a href="/manage-collection" class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors inline-block">Manage Collection</a>
+      </div>
+  
+      <!-- Messages/Inbox Card -->
+      <div class="p-6 bg-white rounded-lg shadow-lg mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 mb-3">
+          Messages/Inbox
+        </h3>
+        <p>Communicate with shoppers and other designers.</p>
+        <a href="/messages" class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors inline-block">View Messages</a>
+      </div>
+  
+      <!-- Notifications Card -->
+      <div class="p-6 bg-white rounded-lg shadow-lg mb-4">
+        <h3 class="text-lg font-semibold text-gray-700 mb-3">
+          Notifications
+        </h3>
+        <p>Stay updated with recent activities and alerts.</p>
+        <a href="/notifications" class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors inline-block">View Notifications</a>
+      </div>
+    </div>
+  </div>
+  
+   <!-- Footer -->
+<footer class="bg-white border-t-2 border-green-200">
+    <div class="container mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <!-- Brand Information -->
+        <div class="mb-6 md:mb-0">
+          <a href="index.html" class="text-green-600 hover:text-green-700 font-bold text-lg">CoutureCorner</a>
+          <p class="text-xs text-gray-600 mt-2">Fashion Showcase & Collaboration Platform</p>
+        </div>
+        
+        <!-- Footer Navigation -->
+        <nav class="flex flex-wrap items-center text-sm justify-center mb-6 md:mb-0">
+          <a href="about.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">About Us</a>
+          <a href="privacy-policy.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">Privacy Policy</a>
+          <a href="terms-of-service.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">Terms of Service</a>
+          <a href="contact.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">Contact</a>
+          <a href="faq.html" class="text-green-600 hover:text-green-700 m-2 hover:underline">FAQ</a>
+        </nav>
+        
+        <!-- Social Media Links -->
+        <div class="flex justify-center items-center">
+          <a href="https://twitter.com/CoutureCorner" class="text-gray-600 hover:text-green-600 mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://facebook.com/CoutureCorner" class="text-gray-600 hover:text-green-600 mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/CoutureCorner" class="text-gray-600 hover:text-green-600 mx-2">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright and Legal Notice -->
+      <div class="text-center py-8 mt-10">
+        <p class="text-gray-600 text-sm">
+          © 2024 CoutureCorner. All Rights Reserved. Content may not be reproduced without permission.
+        </p>
+      </div>
+    </div>
+      </footer>
+
+    <!-- Firebase SDK and Initialization -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+    <script>
+      // Initialize Firebase here with your config
+      var firebaseConfig = {
+        apiKey: "AIzaSyCycPZAc3M7BSiGvkb3RAlS08_Pim2mNQY",
+        authDomain: "couturecorner-304b1.firebaseapp.com",
+        projectId: "couturecorner-304b1",
+        storageBucket: "couturecorner-304b1.appspot.com",
+        messagingSenderId: "220970963748",
+        appId: "1:220970963748:web:63ce21945725e8617f99b1",
+        measurementId: "G-LQVD2768WC",
+        // your config values
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      // Function to update the welcome message with the designer's name
+      function updateWelcomeMessage(displayName) {
+        const welcomeMessage = document.getElementById("welcome-message");
+        if (welcomeMessage && displayName) {
+          welcomeMessage.textContent = `Welcome, ${displayName}!`;
+        }
+      }
+
+      // Checking for authentication state changes
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          // User is signed in, so fetch their profile information
+          const userId = user.uid;
+          firebase
+            .firestore()
+            .collection("users")
+            .doc(userId)
+            .get()
+            .then(function (doc) {
+              if (doc.exists) {
+                // Assuming the name is stored under a field called 'name'
+                updateWelcomeMessage(doc.data().name);
+              } else {
+                console.log("No such document!");
+              }
+            })
+            .catch(function (error) {
+              console.log("Error getting document:", error);
+            });
+        }
+      });
+      // Logout function
+      function logout() {
+        console.log("Attempting to log out..."); // For debugging
+        firebase
+          .auth()
+          .signOut()
+          .then(function () {
+            console.log("Logout successful"); // For debugging
+            window.location.href = "index.html"; // Redirect to the home page after logout
+          })
+          .catch(function (error) {
+            console.error("Sign Out Error", error);
+          });
+      }
+
+      // Event listener for logout link
+      document
+        .getElementById("logout-link")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          logout();
+        });
+    </script>
+  </body>
+</html>

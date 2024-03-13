@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer Portfolio - CoutureCorner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Modal Style -->
+    <style>
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        padding-top: 60px;
+      }
+
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #000;
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #555;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-700">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="index.html" class="flex items-center">
+          <img src="LOGO.webp" alt="Logo" class="mr-1" style="height: 50px" />
+          <!-- Reduce right margin if needed -->
+          <span class="font-bold text-xl text-green-600" style="margin-left: 0"
+            >CoutureCorner</span
+          >
+          <!-- Adjust left margin if necessary -->
+        </a>
+        <div class="flex items-center space-x-4">
+          <a href="Main.html" class="text-gray-600 hover:text-green-600"
+            >Home</a
+          >
+          <a href="shop.html" class="text-gray-600 hover:text-green-600"
+            >Shop</a
+          >
+          <a
+            href="Designers.html"
+            class="text-gray-600 hover:text-green-600 text-green-700 bg-green-50"
+            >Designers</a
+          >
+          <a href="events.html" class="text-gray-600 hover:text-green-600"
+            >Events</a
+          >
+          <a href="about.html" class="text-gray-600 hover:text-green-600"
+            >About Us</a
+          >
+          <a href="contact.html" class="text-gray-600 hover:text-green-600"
+            >Contact Us</a
+          >
+          <a href="resources.html" class="text-gray-600 hover:text-green-600"
+            >Resources</a
+          >
+          <a href="community.html" class="text-gray-600 hover:text-green-600"
+            >Community</a
+          >
+          <a href="blog.html" class="text-gray-600 hover:text-green-600"
+            >Blog</a
+          >
+          <!-- Become a Designer Button -->
+      <a href="DesignerProfileCreate.html" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors">Become A Designer</a>
+
+        </div>
+        <!-- Icons for profile and cart could also be included here -->
+        <div class="flex items-center">
+          <a
+            href="profile.html"
+            class="text-gray-600 hover:text-green-600 mx-2"
+          >
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="cart.html" class="text-gray-600 hover:text-green-600 mx-2">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Search Bar -->
+    <div class="bg-white py-4 shadow-md">
+      <div class="container mx-auto px-6">
+        <div class="relative">
+          <input
+            type="search"
+            placeholder="Search..."
+            class="w-full px-4 py-2 border rounded-full text-gray-700 focus:outline-none"
+          />
+          <button class="absolute right-0 top-0 mt-3 mr-4">
+            <i class="fas fa-search text-gray-600"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+    </style>
+
+    <!-- Designer Portfolio Section -->
+    <section class="container mx-auto p-6">
+      <h2 class="text-4xl font-semibold text-center mb-8">
+        Designer Portfolios
+      </h2>
+      <p class="text-center text-gray-600 mb-8">
+        Discover designers for tailor-made creations and collaborative ventures.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Portfolio Item -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <a href="designerportfolio.html" class="block">
+            <img src="DP4.webp" alt="Designer Work" class="rounded-lg mb-4" />
+            <h3 class="text-lg font-semibold">Designer's Name</h3>
+          </a>
+          <p class="text-sm text-gray-600">
+            Brief description or title of the work
+          </p>
+          <div class="flex items-center justify-between mt-4">
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-heart"></i> Like
+            </button>
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-bookmark"></i> Save
+            </button>
+            <button class="contactBtn text-green-600 hover:text-green-800">
+              <i class="far fa-envelope"></i> Contact
+            </button>
+          </div>
+        </div>
+        <!-- End of Portfolio Item -->
+        <!-- Portfolio Item -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <a href="designerportfolio.html" class="block">
+            <img src="DP2.webp" alt="Designer Work" class="rounded-lg mb-4" />
+            <h3 class="text-lg font-semibold">Designer's Name</h3>
+          </a>
+          <p class="text-sm text-gray-600">
+            Brief description or title of the work
+          </p>
+
+          <div class="flex items-center justify-between mt-4">
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-heart"></i> Like
+            </button>
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-bookmark"></i> Save
+            </button>
+            <button class="contactBtn text-green-600 hover:text-green-800">
+              <i class="far fa-envelope"></i> Contact
+            </button>
+          </div>
+        </div>
+        <!-- End of Portfolio Item -->
+        <!-- Portfolio Item -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <a href="designerportfolio.html" class="block">
+            <img src="DP3.webp" alt="Designer Work" class="rounded-lg mb-4" />
+            <h3 class="text-lg font-semibold">Designer's Name</h3>
+          </a>
+          <p class="text-sm text-gray-600">
+            Brief description or title of the work
+          </p>
+
+          <div class="flex items-center justify-between mt-4">
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-heart"></i> Like
+            </button>
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-bookmark"></i> Save
+            </button>
+            <button class="contactBtn text-green-600 hover:text-green-800">
+              <i class="far fa-envelope"></i> Contact
+            </button>
+          </div>
+        </div>
+        <!-- End of Portfolio Item -->
+        <!-- Portfolio Item -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <a href="designerportfolio.html" class="block">
+            <img src="DP4.webp" alt="Designer Work" class="rounded-lg mb-4" />
+            <h3 class="text-lg font-semibold">Designer's Name</h3>
+          </a>
+          <p class="text-sm text-gray-600">
+            Brief description or title of the work
+          </p>
+
+          <div class="flex items-center justify-between mt-4">
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-heart"></i> Like
+            </button>
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-bookmark"></i> Save
+            </button>
+            <button class="contactBtn text-green-600 hover:text-green-800">
+              <i class="far fa-envelope"></i> Contact
+            </button>
+          </div>
+        </div>
+        <!-- End of Portfolio Item -->
+        <!-- Portfolio Item -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <a href="designerportfolio.html" class="block">
+            <img src="DP5.webp" alt="Designer Work" class="rounded-lg mb-4" />
+            <h3 class="text-lg font-semibold">Designer's Name</h3>
+          </a>
+          <p class="text-sm text-gray-600">
+            Brief description or title of the work
+          </p>
+
+          <div class="flex items-center justify-between mt-4">
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-heart"></i> Like
+            </button>
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-bookmark"></i> Save
+            </button>
+            <button class="contactBtn text-green-600 hover:text-green-800">
+              <i class="far fa-envelope"></i> Contact
+            </button>
+          </div>
+        </div>
+        <!-- End of Portfolio Item -->
+        <!-- Portfolio Item -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <a href="designerportfolio.html" class="block">
+            <img src="DP6.webp" alt="Designer Work" class="rounded-lg mb-4" />
+            <h3 class="text-lg font-semibold">Designer's Name</h3>
+          </a>
+          <p class="text-sm text-gray-600">
+            Brief description or title of the work
+          </p>
+
+          <div class="flex items-center justify-between mt-4">
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-heart"></i> Like
+            </button>
+            <button class="text-green-600 hover:text-green-800">
+              <i class="far fa-bookmark"></i> Save
+            </button>
+            <button class="contactBtn text-green-600 hover:text-green-800">
+              <i class="far fa-envelope"></i> Contact
+            </button>
+          </div>
+        </div>
+        <!-- End of Portfolio Item -->
+
+        <!-- ... Additional portfolio items ... -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+      <div class="container mx-auto px-6 py-10">
+        <div class="flex justify-between items-center">
+          <div class="text-green-600">
+            <h2 class="text-lg font-bold">CoutureCorner</h2>
+            <p class="text-xs">Fashion Showcase & Collaboration Platform</p>
+          </div>
+
+          <nav class="flex flex-wrap items-center text-sm justify-center">
+            <a href="#" class="text-green-600 m-2 hover:underline">About Us</a>
+            <a href="#" class="text-green-600 m-2 hover:underline"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-green-600 m-2 hover:underline"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-green-600 m-2 hover:underline">Contact</a>
+            <a
+              href="faq.html"
+              class="text-green-600 hover:text-green-700 m-2 hover:underline"
+              >FAQ</a
+            >
+          </nav>
+
+          <!-- Social Media Links -->
+          <div class="flex justify-center items-center">
+            <a
+              href="https://twitter.com/CoutureCorner"
+              class="text-gray-600 hover:text-green-600 mx-2"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://facebook.com/CoutureCorner"
+              class="text-gray-600 hover:text-green-600 mx-2"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://instagram.com/CoutureCorner"
+              class="text-gray-600 hover:text-green-600 mx-2"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="border-t-2 border-green-200 text-center py-8 mt-10">
+          <p class="text-green-600 text-sm font-semibold">
+            © 2024 CoutureCorner. All Rights Reserved.Content may not be
+            reproduced without permission.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Collaboration Modal -->
+    <div
+      id="collaborationModal"
+      class="hidden fixed z-10 left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40"
+    >
+      <div class="bg-white rounded-lg w-1/2 mx-auto mt-20 p-8">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-lg font-semibold">Request Collaboration</h3>
+          <button onclick="closeModal()" class="text-black">&times;</button>
+        </div>
+        <form id="collaborationForm">
+          <!-- Form content -->
+          <div class="mb-4">
+            <label for="designerName" class="block text-gray-700 text-sm mb-2"
+              >Designer's Name:</label
+            >
+            <input
+              type="text"
+              id="designerName"
+              name="designerName"
+              required
+              class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              for="projectDescription"
+              class="block text-gray-700 text-sm mb-2"
+              >Project Description:</label
+            >
+            <textarea
+              id="projectDescription"
+              name="projectDescription"
+              required
+              class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            ></textarea>
+          </div>
+          <div class="mb-4">
+            <button
+              type="submit"
+              class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Function to open the collaboration modal
+      function openModal(designerName) {
+        document.getElementById("collaborationModal").style.display = "block";
+        document.getElementById("designerName").value = designerName;
+      }
+
+      // Function to close the collaboration modal
+      function closeModal() {
+        document.getElementById("collaborationModal").style.display = "none";
+      }
+
+      // Event listener for form submission
+      document
+        .getElementById("collaborationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submit action
+          // Here you would typically handle the form submission request to your server
+          // For example, you could use fetch API to send the form data
+          var formData = new FormData(
+            document.getElementById("collaborationForm")
+          );
+
+          // Example POST request with fetch:
+          fetch("/submit-collaboration-request", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Success:", data);
+              // You can close the modal and clear the form or show a success message
+              closeModal();
+              document.getElementById("collaborationForm").reset();
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              // Handle errors here, such as displaying an error message to the user
+            });
+        });
+
+      // Function to call when the 'Contact' button is clicked
+      // You need to pass the designer's name to this function from the 'Contact' button onclick event
+      // For example: onclick="openModal('Designer Name')"
+    </script>
+    <!-- The Modal -->
+    <div id="contactModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form
+          action="YOUR_SERVER_SIDE_ENDPOINT"
+          method="POST"
+          class="space-y-4"
+        >
+          <h2 class="text-lg font-semibold text-gray-900">Contact Designer</h2>
+
+          <div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="block w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="block w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+              class="block w-full p-2 border rounded"
+            ></textarea>
+          </div>
+
+          <!-- Google reCAPTCHA widget -->
+          <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+
+          <div>
+            <input
+              type="submit"
+              value="Send Message"
+              class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 cursor-pointer"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Get all the contact buttons
+      var contactBtns = document.querySelectorAll(".contactBtn");
+
+      // Get the modal
+      var modal = document.getElementById("contactModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // Assign a click event handler to each contact button
+      contactBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          modal.style.display = "block";
+        };
+      });
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
