@@ -1,366 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Designer Profile - CoutureCorner</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <!-- Other head elements here -->
-  </head>
-  <body class="bg-gray-100">
-    <!-- Navigation bar here -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-      <div
-        class="container mx-auto px-6 py-3 flex justify-between items-center"
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Designer Profile - CoutureCorner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+     .close-button {
+    position: absolute;
+    top: 1rem; /* adjust top spacing */
+    right: 1rem; /* adjust right spacing */
+    font-size: 1.5rem; /* adjust size if necessary */
+    z-index: 10;
+  }
+
+    /* Other styling can go here */
+</style>
+</head>
+<body class="bg-gray-100 text-gray-700">
+
+<!-- Navigation bar here -->
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+  <div
+    class="container mx-auto px-6 py-3 flex justify-between items-center"
+  >
+    <a href="index.html" class="flex items-center">
+      <img src="LOGO.webp" alt="Logo" class="mr-1" style="height: 50px" />
+      <!-- Reduce right margin if needed -->
+      <span class="font-bold text-xl text-green-600" style="margin-left: 0"
+        >CoutureCorner</span
       >
-        <a href="index.html" class="flex items-center">
-          <img src="LOGO.webp" alt="Logo" class="mr-1" style="height: 50px" />
-          <!-- Reduce right margin if needed -->
-          <span class="font-bold text-xl text-green-600" style="margin-left: 0"
-            >CoutureCorner</span
-          >
-          <!-- Adjust left margin if necessary -->
-        </a>
-        <div class="flex items-center space-x-4">
-          <a href="Main.html" class="text-gray-600 hover:text-green-600"
-            >Home</a
-          >
-          <a href="shop.html" class="text-gray-600 hover:text-green-600"
-            >Shop</a
-          >
-          <a href="Designers.html" class="text-gray-600 hover:text-green-600"
-            >Designers</a
-          >
-          <a href="events.html" class="text-gray-600 hover:text-green-600"
-            >Events</a
-          >
-          <a href="about.html" class="text-gray-600 hover:text-green-600"
-            >About Us</a
-          >
-          <a href="contact.html" class="text-gray-600 hover:text-green-600"
-            >Contact Us</a
-          >
-          <a href="resources.html" class="text-gray-600 hover:text-green-600"
-            >Resources</a
-          >
-          <a href="community.html" class="text-gray-600 hover:text-green-600"
-            >Community</a
-          >
-          <a href="blog.html" class="text-gray-600 hover:text-green-600"
-            >Blog</a
-          >
-          <!-- Become a Designer Button -->
-          <a
-            href="DesignerProfileCreate.html"
-            class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors text-green-700 bg-green-50"
-            >Become A Designer</a
-          >
-        </div>
-        <!-- Icons for profile and cart could also be included here -->
-        <div class="flex items-center">
-          <a
-            href="profile.html"
-            class="text-gray-600 hover:text-green-600 mx-2"
-          >
-            <i class="fas fa-user"></i>
-          </a>
-          <a href="cart.html" class="text-gray-600 hover:text-green-600 mx-2">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-        </div>
-      </div>
-    </nav>
-    <!-- Designer Profile Creation Form -->
-    <section class="container mx-auto p-6">
-      <div
-        class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden p-8"
+      <!-- Adjust left margin if necessary -->
+    </a>
+    <div class="flex items-center space-x-4">
+      <a href="Main.html" class="text-gray-600 hover:text-green-600"
+        >Home</a
       >
-        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">
-          Create Your Designer Profile
-        </h2>
-        <form
-          action="path_to_your_server_endpoint"
-          method="POST"
-          enctype="multipart/form-data"
-          class="space-y-6"
-        >
-          <!-- Profile Picture Upload -->
+      <a href="shop.html" class="text-gray-600 hover:text-green-600"
+        >Shop</a
+      >
+      <a href="Designers.html" class="text-gray-600 hover:text-green-600"
+        >Designers</a
+      >
+      <a href="events.html" class="text-gray-600 hover:text-green-600"
+        >Events</a
+      >
+      <a href="about.html" class="text-gray-600 hover:text-green-600"
+        >About Us</a
+      >
+      <a href="contact.html" class="text-gray-600 hover:text-green-600"
+        >Contact Us</a
+      >
+      <a href="resources.html" class="text-gray-600 hover:text-green-600"
+        >Resources</a
+      >
+      <a href="community.html" class="text-gray-600 hover:text-green-600"
+        >Community</a
+      >
+      <a href="blog.html" class="text-gray-600 hover:text-green-600"
+        >Blog</a
+      >
+      <!-- Become a Designer Button -->
+      <a
+        href="DesignerProfileCreate.html"
+        class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors text-green-700 bg-green-50"
+        >Become A Designer</a
+      >
+    </div>
+    <!-- Icons for profile and cart could also be included here -->
+    <div class="flex items-center">
+      <a
+        href="profile.html"
+        class="text-gray-600 hover:text-green-600 mx-2"
+      >
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="cart.html" class="text-gray-600 hover:text-green-600 mx-2">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="container mx-auto p-6">
+  <form method="POST" enctype="multipart/form-data" class="space-y-6">
+    <div class="flex flex-wrap md:flex-nowrap gap-4">
+      
+      <!-- Profile Creation Section -->
+      <div class="flex-1 bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-2xl font-semibold mb-4">Brand Details</h2>
+        <div class="space-y-4">
+          <div>
+            <label class="block mb-2 text-sm font-medium text-gray-700">Profile Picture Upload:</label>
+            <input type="file" name="profile_picture" accept="image/*" required class="block w-full text-sm text-gray-500
+              file:mr-4 file:py-2 file:px-4
+              file:rounded-full file:border-0
+              file:text-sm file:font-semibold
+              file:bg-green-50 file:text-green-700
+              hover:file:bg-green-100
+            "/>
+          </div>
+          <div>
+            <input type="text" name="designer_name" placeholder="Designer's Name" required class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
+          </div>
+          <!-- ... other input fields ... -->
           <div class="mb-4">
-            <label class="block mb-2">Profile Picture Upload:</label>
-            <input
-              type="file"
-              name="profile_picture"
-              accept="image/*"
-              required
-              class="border p-2 rounded w-full"
-            />
-          </div>
-
-          <!-- Grid layout for input fields -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-            <!-- Single column inputs -->
-            <div>
-              <input
-                type="text"
-                name="designer_name"
-                placeholder="Designer's Name"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="brand_name"
-                placeholder="Brand Name"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-
-            <!-- Textarea inputs -->
-            <div class="md:col-span-2">
-              <textarea
-                name="design_philosophy"
-                placeholder="Design Philosophy"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded h-24"
-              ></textarea>
-            </div>
-            <div class="md:col-span-2">
-              <textarea
-                name="designers_statement"
-                placeholder="Designer's Statement"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded h-24"
-              ></textarea>
-            </div>
-            <!-- Additional fields -->
-            <div>
-              <input
-                type="text"
-                name="design_aesthetic"
-                placeholder="Design Aesthetic"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="collaborations"
-                placeholder="Previous Collaborations"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <input
-                type="url"
-                name="facebook_url"
-                placeholder="Facebook URL"
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <input
-                type="url"
-                name="instagram_url"
-                placeholder="Instagram URL"
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <input
-                type="url"
-                name="twitter_url"
-                placeholder="Twitter URL"
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-            <!-- Right side inputs -->
-            <div>
-              <input
-                type="number"
-                name="years_experience"
-                min="0"
-                placeholder="Years of Experience"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="achievements"
-                placeholder="Notable Achievements"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-
-            <!-- Left side inputs -->
-            <div>
-              <input
-                type="text"
-                name="inspirations"
-                placeholder="Inspirations"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="education"
-                placeholder="Education"
-                required
-                class="border-gray-300 focus:border-green-500 w-full p-2 rounded"
-              />
-            </div>
-
-            <!-- File Uploads -->
-            <div class="md:col-span-2">
-              <label class="block mb-2">Portfolio Upload (images):</label>
-              <input
-                type="file"
-                name="portfolio_images[]"
-                accept="image/*"
-                multiple
-                required
-                class="border p-2 rounded w-full"
-              />
-            </div>
-            <div class="md:col-span-2">
-              <label class="block mb-2">Shop Items Upload (images):</label>
-              <input
-                type="file"
-                name="shop_images[]"
-                accept="image/*"
-                multiple
-                required
-                class="border p-2 rounded w-full"
-              />
-            </div>
-
-            <!-- Categories for Shop -->
-            <div class="mb-4">
-              <label class="block mb-2">Select Shop Categories:</label>
-              <select
-                name="shop_category[]"
-                multiple
-                required
-                class="border p-2 rounded w-full"
-              >
-                <option value="new_arrivals">New Arrivals</option>
-                <option value="women">Women</option>
-                <option value="men">Men</option>
-                <option value="jewelry">Jewelry</option>
-                <option value="accessories">Accessories</option>
-                <option value="footwear">Footwear</option>
-                <option value="designer_exclusives">Designer Exclusives</option>
-                <option value="kids">Kids</option>
-                <option value="home_decor">Home Decor</option>
-                <option value="sale">Sale</option>
-                <!-- Add more categories as needed -->
-              </select>
-              <small
-                >Hold Ctrl (Cmd on Mac) to select multiple categories.</small
-              >
-            </div>
-
-            <!-- Contact Details -->
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                class="border p-2 rounded w-full"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                name="phone"
-                placeholder="Phone"
-                required
-                class="border p-2 rounded w-full"
-              />
-            </div>
-
-            <!-- Submit Button -->
-            <div class="md:col-span-2 text-center">
-              <input
-                type="submit"
-                value="Create Profile"
-                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
-              />
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white">
-      <div class="container mx-auto px-6 py-10">
-        <div class="flex justify-between items-center">
-          <div class="text-green-600">
-            <h2 class="text-lg font-bold">CoutureCorner</h2>
-            <p class="text-xs">Fashion Showcase & Collaboration Platform</p>
-          </div>
-
-          <nav class="flex flex-wrap items-center text-sm justify-center">
-            <a href="#" class="text-green-600 m-2 hover:underline">About Us</a>
-            <a href="#" class="text-green-600 m-2 hover:underline"
-              >Privacy Policy</a
-            >
-            <a href="#" class="text-green-600 m-2 hover:underline"
-              >Terms of Service</a
-            >
-            <a href="#" class="text-green-600 m-2 hover:underline">Contact</a>
-            <a
-              href="faq.html"
-              class="text-green-600 hover:text-green-700 m-2 hover:underline"
-              >FAQ</a
-            >
-          </nav>
-
-          <!-- Social Media Links -->
-          <div class="flex justify-center items-center">
-            <a
-              href="https://twitter.com/CoutureCorner"
-              class="text-gray-600 hover:text-green-600 mx-2"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              href="https://facebook.com/CoutureCorner"
-              class="text-gray-600 hover:text-green-600 mx-2"
-            >
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a
-              href="https://instagram.com/CoutureCorner"
-              class="text-gray-600 hover:text-green-600 mx-2"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
+            <input type="text" name="brand_name" placeholder="Brand Name" required class="border p-2 rounded w-full">
         </div>
-
-        <div class="border-t-2 border-green-200 text-center py-8 mt-10">
-          <p class="text-green-600 text-sm font-semibold">
-            © 2024 CoutureCorner. All Rights Reserved.Content may not be
-            reproduced without permission.
-          </p>
+        <div class="mb-4">
+            <textarea name="philosophy" placeholder="Design Philosophy" required class="border p-2 rounded w-full h-24"></textarea>
+        </div>
+        <div class="mb-4">
+            <textarea name="bio" placeholder="Bio" required class="border p-2 rounded w-full h-24"></textarea>
+        </div>
+        <div class="mb-4">
+            <input type="number" name="years_experience" min="0" placeholder="Years of Experience" required class="border p-2 rounded w-full">
+        </div>
+        <div class="mb-4">
+            <input type="url" name="instagram_url" placeholder="Instagram URL" class="border p-2 rounded w-full">
+        </div>
+        <div class="mb-4">
+            <input type="url" name="twitter_url" placeholder="Twitter URL" class="border p-2 rounded w-full">
+        </div>
+        <div class="mb-4">
+            <input type="url" name="facebook_url" placeholder="Facebook URL" class="border p-2 rounded w-full">
+        </div>
+      
         </div>
       </div>
-    </footer>
-  </body>
+
+      <!-- Portfolio Section -->
+      <div class="flex-1 bg-white shadow-md rounded-lg p-6 mt-4 md:mt-0">
+        <h2 class="text-2xl font-semibold mb-4">Portfolio</h2>
+        <div class="space-y-4">
+          <!-- Project Component -->
+          <div class="border p-2 rounded">
+            <div class="flex items-center space-x-2">
+              <img src="project1.webp" alt="Project Image" class="h-20 w-20 object-cover rounded">
+              <div>
+                <h3 class="font-semibold">Project Title</h3>
+                <p class="text-sm text-gray-600">Project Description</p>
+                <!-- ... -->
+                <p>Number of Products: <span class="font-semibold">3</span></p>
+                <p>Tags: <span class="font-semibold">Valentine's, Spring Collection</span></p>
+
+              </div>
+            </div>
+          </div>
+        <!-- Button to trigger modal -->
+<button onclick="openModal()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+  Add New Project
+</button>
+
+<!-- Modal HTML -->
+<div id="addProjectModal" class="hidden fixed z-10 left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-50">
+  <div class="modal-content bg-white w-3/4 md:w-1/2 lg:w-1/3 mx-auto mt-10 p-5 rounded shadow-lg">
+    <span onclick="closeModal()" class="float-right cursor-pointer text-xl">&times;</span>
+    <h2 class="text-2xl font-semibold mb-4">Add Project</h2>
+    <form id="addProjectForm">
+      <!-- Project Details -->
+      <div class="mb-4">
+        <label class="block mb-2">Project Title:</label>
+        <input type="text" name="project_title" required class="border p-2 rounded w-full">
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2">Project Description:</label>
+        <textarea name="project_description" required class="border p-2 rounded w-full h-24"></textarea>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2">Select Tags:</label>
+        <div class="flex flex-wrap gap-2">
+            <label class="inline-flex items-center">
+                <input type="checkbox" name="tags" value="valentines" class="form-checkbox">
+                <span class="ml-2">Valentine's</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="checkbox" name="tags" value="spring" class="form-checkbox">
+                <span class="ml-2">Spring Collection</span>
+            </label>
+            <!-- Repeat for other tags -->
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="tags" value="summer" class="form-checkbox">
+              <span class="ml-2">Summer Collection</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="tags" value="winter" class="form-checkbox">
+            <span class="ml-2">Winter Collection</span>
+        </label>
+        <label class="inline-flex items-center">
+          <input type="checkbox" name="tags" value="fall" class="form-checkbox">
+          <span class="ml-2">Fall Collection</span>
+      </label>
+        </div>
+    </div>
+    
+      <div class="mb-4">
+        <label class="block mb-2">Select Image:</label>
+        <input type="file" name="project_image" accept="image/*" class="border p-2 rounded w-full">
+      </div>
+
+      <h3 class="text-xl font-semibold mb-4">Products</h3>
+      <div id="products-section" class="mb-4">
+        <!-- Static example; dynamically generate this with JavaScript as needed -->
+        <div class="product mb-4 p-4 border rounded">
+          <img src="Products1.webp" alt="Product Name" class="w-20 h-20 object-cover rounded">
+          <div>
+            <h4 class="font-semibold">Product Name</h4>
+            <p>Description</p>
+            <p>$Price</p>
+          </div>
+        </div>
+        <!-- Repeat for each product -->
+      </div>
+      
+      <div class="flex flex-col space-y-4 mt-4 items-center">
+        <button id="addProductBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mx-auto" style="width: 200px;">
+          Add New Product
+        </button>
+        
+      <!-- Add Product Modal -->
+      <div id="addProductModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-50">
+        <div class="flex justify-center items-center h-full">
+          <div class="bg-white rounded-lg max-w-md mx-auto p-6 space-y-4 relative">
+            <!-- Close button -->
+            <span id="closeProductModal" class="close-button absolute top-0 right-0 mt-2 mr-2 cursor-pointer">&times;</span>
+            <h3 class="text-xl font-semibold text-center mb-4">Add Product</h3>
+      <form id="addProductForm">
+        <input type="text" name="product_name" placeholder="Product Name" required class="border p-2 rounded w-full mb-4">
+        <textarea name="description" placeholder="Description" required class="border p-2 rounded w-full mb-4"></textarea>
+        <input type="number" name="price" placeholder="Price" required class="border p-2 rounded w-full mb-4">
+        <div class="mb-4">
+          <span>Select Category:</span>
+          <div class="flex flex-wrap">
+            <label class="inline-flex items-center mr-2">
+              <input type="checkbox" name="categories" value="new_arrivals" class="form-checkbox h-5 w-5 text-green-600"><span class="ml-2">New Arrivals</span>
+            </label>
+            <label class="inline-flex items-center mr-2">
+              <input type="checkbox" name="categories" value="men" class="form-checkbox h-5 w-5 text-green-600"><span class="ml-2">Men</span>
+            </label>
+            <label class="inline-flex items-center mr-2">
+              <input type="checkbox" name="categories" value="women" class="form-checkbox h-5 w-5 text-green-600"><span class="ml-2">Women</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="categories" value="jewelry" class="form-checkbox h-5 w-5 text-green-600"><span class="ml-2">Jewelry</span>
+            </label>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2">Select Image:</label>
+          <input type="file" name="image" accept="image/*" required class="border p-2 rounded w-full">
+        </div>
+        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full">Create Product</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+          Create Project
+        </button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- Save Button -->
+    <div class="flex justify-center mt-6">
+      <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">
+        Save Profile
+      </button>
+    </div>
+  </form>
+</main>
+
+<!-- Footer here -->
+<footer class="bg-white">
+  <div class="container mx-auto px-6 py-10">
+    <div class="flex justify-between items-center">
+      <div class="text-green-600">
+        <h2 class="text-lg font-bold">CoutureCorner</h2>
+        <p class="text-xs">Fashion Showcase & Collaboration Platform</p>
+      </div>
+
+      <nav class="flex flex-wrap items-center text-sm justify-center">
+        <a href="#" class="text-green-600 m-2 hover:underline">About Us</a>
+        <a href="#" class="text-green-600 m-2 hover:underline"
+          >Privacy Policy</a
+        >
+        <a href="#" class="text-green-600 m-2 hover:underline"
+          >Terms of Service</a
+        >
+        <a href="#" class="text-green-600 m-2 hover:underline">Contact</a>
+        <a
+          href="faq.html"
+          class="text-green-600 hover:text-green-700 m-2 hover:underline"
+          >FAQ</a
+        >
+      </nav>
+
+      <!-- Social Media Links -->
+      <div class="flex justify-center items-center">
+        <a
+          href="https://twitter.com/CoutureCorner"
+          class="text-gray-600 hover:text-green-600 mx-2"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://facebook.com/CoutureCorner"
+          class="text-gray-600 hover:text-green-600 mx-2"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://instagram.com/CoutureCorner"
+          class="text-gray-600 hover:text-green-600 mx-2"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t-2 border-green-200 text-center py-8 mt-10">
+      <p class="text-green-600 text-sm font-semibold">
+        © 2024 CoutureCorner. All Rights Reserved.Content may not be
+        reproduced without permission.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Open the modal for adding projects
+  function openModal() {
+    document.getElementById('addProjectModal').style.display = 'block';
+  }
+
+  // Close the modal for adding projects
+  function closeModal() {
+    document.getElementById('addProjectModal').style.display = 'none';
+  }
+
+// Add new product section logic
+function addNewProduct() {
+  // Logic to add a new product section dynamically
+}
+
+// Logic for Add Product Modal
+document.addEventListener('DOMContentLoaded', () => {
+  const addProductModal = document.getElementById('addProductModal');
+  const addProductBtn = document.getElementById('addProductBtn');
+  const addProductForm = document.getElementById('addProductForm');
+  const closeProductModalBtn = document.getElementById('closeProductModal'); // Close button for the modal
+
+  // Open the Add Product Modal
+  addProductBtn.addEventListener('click', () => {
+    addProductModal.classList.remove('hidden');
+  });
+
+  // Close the Add Product Modal with the close button
+  closeProductModalBtn.addEventListener('click', () => {
+    addProductModal.classList.add('hidden');
+  });
+
+  // Close the modal when clicking outside of the modal content
+  window.addEventListener('click', (event) => {
+    if (event.target === addProductModal) {
+      addProductModal.classList.add('hidden');
+    }
+  });
+
+  // Submit form logic
+  addProductForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    // Here you would handle the form submission, e.g., using AJAX or FormData
+    console.log('Form submitted');
+    // Close the modal after form submission
+    addProductModal.classList.add('hidden');
+  });
+});
+
+</script>
+
+</body>
 </html>
